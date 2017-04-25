@@ -6,9 +6,9 @@ class CivilizationType
   end
 
   def create_army
-    army = []
+    army = Army.new
     @units.each do |unit_type, unit_count|
-      unit_count.times { army << Kernel.const_get(unit_type.capitalize) }
+      unit_count.times { army.units << Kernel.const_get(unit_type.capitalize) }
     end
     army
   end
