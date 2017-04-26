@@ -1,5 +1,5 @@
 class BattleHistory
-  attr_accessor :attacker, :defender, :winner, :tie
+  attr_accessor :attacker, :defender, :winner, :loser, :tie
 
   def initialize(attrs = {})
     @attacker = attrs[:attacker]
